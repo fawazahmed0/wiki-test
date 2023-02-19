@@ -97,7 +97,7 @@ async function test() {
         let ghFileLen = 349 * 1000  // 349 kb
         fs.outputFileSync(pathToSave, data)
         // Save in wiki, if not searchable in github code search
-        if(Buffer.byteLength(data, 'utf8') > ghFileLen - 2000)
+        //if(Buffer.byteLength(data, 'utf8') > ghFileLen - 2000)
         fs.outputFileSync(path.join(__dirname, 'wiki',path.basename(pathToSave)), data)
     }
 
